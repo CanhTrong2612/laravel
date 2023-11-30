@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css" integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -17,7 +21,7 @@
     {{View::make('header')}}
     @yield('content')
     {{View::make('footer')}}
-
+    
 </body>
 <style>
     /* --------------------------------header----------------------- */
@@ -48,20 +52,27 @@
     .slider {
         text-align: center;
     }
+    .owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: 600px;
+}
+    
     /* img.slider-img{
         height: 600px ;
         
     } */
     .custom-product{
-        height: 600px
+        height: 600px;
+        margin: 0 20px;
     }
     .slider-container {
-        width: 80%;
+        width: 100%;
         margin: auto;
         overflow: hidden;
     }
     .slider {
-      
+        
         display: flex;
         transition: transform 0.5s ease-in-out;
     }
@@ -121,10 +132,20 @@
     }
 
     .font {
+
         font-weight: bold;
-        padding-top:10px ;
+        padding-top:30px ;
         margin-left: 74px;
         
+    }
+    .owl-theme .owl-dots .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        margin-top: 10px;
+    }
+        .owl-theme .owl-nav {
+        margin-top: 10px;
+        display:none;
     }
     .trending-wrapper{
        background: #f8f7f7;
@@ -223,7 +244,7 @@
 
     .panel-footer {
     margin: auto;
-    width: 80%;
+    
     height: 250px;
     padding: 30px;
     background-color: #29a44a;

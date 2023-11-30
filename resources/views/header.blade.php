@@ -9,6 +9,7 @@ if(Session::has('user'))
 ?>
 <nav class="navbar navbar-default">
     <div class="container-fluid " style="background-color: #29a44a;">
+      
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -33,7 +34,7 @@ if(Session::has('user'))
           <button type="submit" class="btn btn-default">Search</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/cartlist">cart({{$total}})</a></li>
+          <li><a href="/cartlist"> <i class="fa-solid fa-cart-shopping"></i> ({{$total}}) </a></li>
           @if(Session::has('user'))
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{Session::get('user')['name']}}

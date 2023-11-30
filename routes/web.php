@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Admin\ProductAdminController;
 use App\Http\Controllers\Admin\OderAdminController;
+use App\Http\Controllers\Users\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,12 +47,18 @@ Route::prefix('admin')->group(function () {
         Route::get('destroy/{id}', [UserAdminController::class, 'delete']);
     });
     Route::get('customers',[OderAdminController::class,'list']);
+    Route::get('customers/view/{customer}',[OderAdminController::class,'show']);
+    // Route::get('customers/view/{customer}',[OderAdminController::class,'showProduct']);
+
 
 });
 
 
 
 Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/signup', function () {
     return view('login');
 });
 
@@ -61,6 +68,7 @@ Route::get('/logout', function () {
 });
 
 Route::post("/login",[UserController::class,'login']);
+Route::post("/signup",[RegisterController::class,'register']);
 Route::get("/",[ProductController::class,'index']);
 Route::get("detail/{id}",[ProductController::class,'detail']);
 Route::get("search",[ProductController::class,'search']);

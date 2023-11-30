@@ -11,7 +11,7 @@ class UserController extends Controller
     {
         
         $user= User::where(['email'=>$req->email])->first();
-        if(!$user || !Hash::check($req->password,$user->password)||$user->userType == "admin")
+        if(!$user || !Hash::check($req->password,$user->password))
         {
            // return "Username or password is not matched";
             return redirect('/login');

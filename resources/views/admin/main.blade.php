@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     @include('admin.head')
+   
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -76,5 +77,7 @@
 </div>
 <!-- ./wrapper -->
 @include('admin.footer')
+
+
 </body>
 </html>

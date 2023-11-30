@@ -44,12 +44,13 @@
             </form>
 
             <form action="signup" method="post" class="form-signup">
+                @csrf
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
                 <input name="user" type="text" id="user-name" class="form-control" placeholder="User name" required="" autofocus="">
                 <input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
                 <input name="email" type="text" id="user-repeatpass" class="form-control" placeholder="Email" required autofocus="">
                 <input name="phone" type="tel" id="user-repeatpass" class="form-control" placeholder="Phone number" required autofocus="">
-                <input name="userType" type="text" id="user-repeatpass" class="form-control" placeholder="User type" required autofocus="">
+               
 
                 <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
                 <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
